@@ -28,7 +28,7 @@ pergunta2 = input("2. Quantas cores há no arco-íris?")
 
 if pergunta2 == "7":
 	print("PARABÉNS!! VOCÊ ACERTOU!!")
-elas:
+else:
 	print("Resposta ERRADA!! A resposta certa é: 7")
 	
 print("                               ")
