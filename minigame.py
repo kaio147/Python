@@ -3,7 +3,7 @@ digito = input("Digite 1 para continuar: ")
 
 if digito == "1":
   print("inciando...")
-if digito != "1":
+else:
 	print("numero errado. . . Reinicie. . .")
 	exit()
 
