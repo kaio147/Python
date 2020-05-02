@@ -19,7 +19,7 @@ pergunta1 = input("1. Quem declarou a Independência do Brasil? ")
 
 if pergunta1 == "D Pedro I":
 	print("PARABÉNS!! VOCÊ ACERTOU!!")
-if pergunta1 != "D Pedro I":
+else:
 	print("Resposta ERRADA!! A resposta certa é: D. Pedro I.")
 	
 print("                               ")
@@ -28,7 +28,7 @@ pergunta2 = input("2. Quantas cores há no arco-íris?")
 
 if pergunta2 == "7":
 	print("PARABÉNS!! VOCÊ ACERTOU!!")
-if pergunta2 != "7":
+elas:
 	print("Resposta ERRADA!! A resposta certa é: 7")
 	
 print("                               ")
@@ -36,7 +36,7 @@ print("                               ")
 pergunta3 = input("3. Qual é o maior osso do corpo humano?")
 if pergunta3 == "Femur":
 	print("PARABÉNS!! VOCÊ ACERTOU!!")
-if pergunta3 != "Femur":
+else:
 	print("Resposta ERRADA!! A resposta certa é: Femur ")
 	
 print("                               ")
@@ -44,7 +44,7 @@ print("                               ")
 pergunta4 = input("4. Quantos séculos há em um milênio?")
 if pergunta4 == "10":
 	print("PARABÉNS!! VOCÊ ACERTOU!!")
-if pergunta4 != "10":
+else:
 	print("Resposta ERRADA!! A resposta certa é: 10")
 	
 print("                               ")
@@ -60,7 +60,7 @@ print("                               ")
 desafio = input("Se está pronto Digite 1: ")
 if desafio == "1":
 	print("Bom Garoto(a). Então Vamos lá")
-if desafio != "1":
+else:
 	print("Então Trate de se Preparar kkk")
 
 print("                               ")
@@ -69,5 +69,5 @@ pergunta_final = input("Se tu Fosse um POMBO, Tu beijava uma POMBA?")
 
 if pergunta_final == "sim":
 	print("Hmmmmmmm BOIOLINHA KKK")
-	if pergunta_final != "sim":
-		print("Você não me engana kkkkk")
+else:
+	print("Você não me engana kkkkk")
