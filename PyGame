@@ -1,25 +1,22 @@
-#First Part...
-print("HEY, WELCOME TO THE TEXT GAME. I HOPE YOU ENJOY THAT")
-print("")
+#1 Part: Nickname and welcome --> 	Login // Welcome message//
 
-welcome_message = input("If you are prepared for it type 1. If not Type 2: ")
-
+nickname = input("Enter a nickname: ")
+print("HEY, " + nickname +  " WELCOME TO THE TEXT GAME. I HOPE YOU ENJOY THAT")
 print("")
 
 #introduction part
+keep_going = input("Type 1 to open the game: ")
 
-if welcome_message == "1":
-    print("Ohh, You are really bold, So lets Begin")
+if keep_going == "1":
+    print(nickname + ", You are really bold, So lets Begin")
     print("")
 else: 
     print("I wish you good Luck!!!")
 
-title = print("THOR AND LOKI JOURNEYS TO THE LAND OF THE GIANTS")
-
+title = print("THOR") #Start of the Histor
 print("")
 
-title_interaction = input("Did you see this History Before? yes or no?")
-
+title_interaction = input("Do you know something about Thor?")
 print("")
 
 if title_interaction == "yes":
@@ -37,19 +34,17 @@ else:
     print("So... Thanks for playing the game :)")
     exit()
 
-#Challenges 
-  
+#Second part: Introduction
 print("")
 
-history_introduction = print("Many seasons ago Thor and Loki were traveling together on Thor’s chariot pulled by his two goats. When the sun began to set, they came to a house of a farmer, the farmer welcomed Thor and Loki inside to stay for the night.")
+history_part1 = print("In Germanic mythology, Thor (/θɔːr/; from Old Norse: Þórr, runic ᚦᚢᚱ þur) is a hammer-wielding god associated with thunder, lightning, storms, sacred groves and trees, strength, the protection of mankind and also hallowing and fertility. Besides Old Norse Þórr, extensions of the god occur in Old English as Þunor and in Old High German as Donar (runic ᚦᛟᚾᚨᚱ þonar). All forms of the deity stem from a Common Germanic *Þunraz (meaning thunder).")
 print("")
 
-history_introduction2 = print("Because the family was just simple farmers they did not have much food to share with their two hungry guests. So Thor slaughtered his two goats, chopped up their meat and put it into a cooking pot.")
-print("")
+#Second Interaction
+readyOrNot = input(nickname + ", Are you ready for the first chanllenge?Type (yes or not): ") 
 
-readyOrNot = input("Are you ready for the first chanllenge?Type (yes or not)")
-
-answer = "they went to a farmers house"
+#First Question
+answer = "thunder, lightning, storms, sacred groves and trees, strength, the protection of mankind and also hallowing and fertility"
 guess = ""
 guess_count = 0
 guess_limit = 5
@@ -57,7 +52,7 @@ out_of_guesses = False
 
 while guess != answer and not(out_of_guesses):
 	if guess_count < guess_limit:
-		guess = input("Enter the Right answer. You only have 5 chances:  ")
+		guess = input("In Germanic mythology, Thor (/θɔːr/; from Old Norse: Þórr, runic ᚦᚢᚱ þur) is a hammer-wielding god associated to what? ")
 		guess_count += 1
 	else: 
 		out_of_guesses = True 
@@ -65,11 +60,85 @@ while guess != answer and not(out_of_guesses):
 if out_of_guesses:
 	print("Out of Guesses. YOU LOSE!!")
 else:
-	print("YOU WIN!!")
+	print(nickname + ", YOU WIN!!")
 
-second_chanllenge = input("You are really smart. So...Type 1 to continue: ")
 
-if second_chanllenge == 1:
+#The Start of the Second Challenge
+second_chanllenge = input("Type (yes or no) to continue: ")
+
+if second_chanllenge == "yes":
     print("So...Lets Go...")
 else: 
     print("Command Invalid!!!")
+
+print("Now you are in the lvl 2, so you will need to be smarter, because you only have 4 chances to give the right answer.")
+print("")
+
+history_part2 = print("Thor is a prominently mentioned god throughout the recorded history of the Germanic peoples, from the Roman occupation of regions of Germania, to the tribal expansions of the Migration Period, to his high popularity during the Viking Age, when, in the face of the process of the Christianization of Scandinavia, emblems of his hammer, Mjölnir, were worn and Norse pagan personal names containing the name of the god bear witness to his popularity.")
+
+answer = "throughout the recorded history of the Germanic peoples, from the Roman occupation of regions of Germania, to the tribal expansions of the Migration Period, to his high popularity during the Viking Age"
+guess = ""
+guess_count = 0
+guess_limit = 4
+out_of_guesses = False
+
+while guess != answer and not(out_of_guesses):
+	if guess_count < guess_limit:
+		guess = input("Thor is a prominently mentioned god throughout what? ")
+		guess_count += 1
+	else: 
+		out_of_guesses = True 
+		
+if out_of_guesses:
+	print("Out of Guesses. YOU LOSE!!")
+else:
+	print(nickname + ", YOU WIN!!")
+
+print("Hello " + nickname + "I can see that you got at here, You are smart (if you just anwered worng, dont worry we have more levels for you.")
+
+pass_through = input("Type 1 to keep going: ")
+
+if pass_through == 1:
+    print("Lets go...")
+else:
+    print("Command Invalid...")
+
+#Third Question
+print("Be Prepared because thats the bigger chanllenge, Be aware because i will give you a lot of information...Lets Go...")
+print("")
+history_part3 = print("Due to the nature of the Germanic corpus, narratives featuring Thor are only attested in Old Norse, where Thor appears throughout Norse mythology. Norse mythology, largely recorded in Iceland from traditional material stemming from Scandinavia, provides numerous tales featuring the god. In these sources, Thor bears at least fifteen names, is the husband of the golden-haired goddess Sif, is the lover of the jötunn Járnsaxa, and is generally described as fierce eyed, red haired and red bearded.")
+print("")
+hist_part3 = print("With Sif, Thor fathered the goddess (and possible valkyrie) Þrúðr; with Járnsaxa, he fathered Magni; with a mother whose name is not recorded, he fathered Móði, and he is the stepfather of the god Ullr. By way of Odin, Thor has numerous brothers, including Baldr. Thor has two servants, Þjálfi and Röskva, rides in a cart or chariot pulled by two goats, Tanngrisnir and Tanngnjóstr (that he eats and resurrects), and is ascribed three dwellings (Bilskirnir, Þrúðheimr, and Þrúðvangr). Thor wields the mountain-crushing hammer, Mjölnir, wears the belt Megingjörð and the iron gloves Járngreipr, and owns the staff Gríðarvölr.")
+print("")
+final_part3 = print("Thor's exploits, including his relentless slaughter of his foes and fierce battles with the monstrous serpent Jörmungandr—and their foretold mutual deaths during the events of Ragnarök—are recorded throughout sources for Norse mythology.")
+print("")
+
+answer = "throughout the recorded history of the Germanic peoples, from the Roman occupation of regions of Germania, to the tribal expansions of the Migration Period, to his high popularity during the Viking Age"
+guess = ""
+guess_count = 0
+guess_limit = 4
+out_of_guesses = False
+
+while guess != answer and not(out_of_guesses):
+	if guess_count < guess_limit:
+		guess = input("Thor is a prominently mentioned god throughout what? ")
+		guess_count += 1
+	else: 
+		out_of_guesses = True 
+		
+if out_of_guesses:
+	print("Out of Guesses. YOU LOSE!!")
+else:
+	print(nickname + ", YOU WIN!!")
+
+print("Hello " + nickname + "I can see that you got at here, You are smart (if you just anwered worng, dont worry we have more levels for you.")
+
+pass_through = input("Type 1 to keep going: ")
+
+if pass_through == 1:
+    print("Lets go...")
+else:
+    print("Command Invalid...")
+
+#Fourth Question
+print("So... We are on the Fourth Level, and now you will have only 3 chances to give me a right answer about the questions of the challenges...")
