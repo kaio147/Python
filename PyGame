@@ -1,70 +1,50 @@
-#1 Part: Nickname and welcome --> 	Login // Welcome message//
 nickname = input("Enter a nickname: ")
-print(f"HEY,{nickname} WELCOME TO THE TEXT GAME. I HOPE YOU ENJOY IT \n")
+print(f"Hey, {nickname} Welcome to the text game. I hope you enjoy it :) \n {nickname}, Our Game will be about: THOR \n")
+interactingWithThePlayer = input("Do you know something about Thor? \n")
 
-#introduction part
-keep_going = input("Type 1 to open the game: ")
+if interactingWithThePlayer == "yes":
+    print("Ohh, Nice! But stay here that im sure that you will enjoy it \n")
+else:
+    print("No problem, You will know more about him Today!! Stay There! \n")
 
-if keep_going == "1":
-    print(f"{nickname}, You are really bold, So lets Begin \n")
-else: 
-    print("I wish you good Luck!!!")
-
-title = print("THOR \n") #Start of the History
-
-title_interaction = input("Do you know something about Thor?\n")
-
-if title_interaction == "yes":
-    print("Ohh, Nice! But stay here that im sure that you will enjoy it\n")
-else: 
-    print("No problem, You wil know more about the history today!! Stay There!\n")
-    
-interaction = input("Type (yes or not) to continue: \n") 
-
-if interaction == "yes":
-    print("So... Lets Go... \n")
-else: 
-    print("So... Thanks for playing the game :) \n")
-    exit()
-
-#QUESTION 1
-print("QUESTION NUMBER 1 \n")
-
-print("In Germanic mythology, Thor (/θɔːr/; from Old Norse: Þórr, runic ᚦᚢᚱ þur) is a hammer-wielding god associated with thunder, lightning, storms, sacred groves and trees, strength, the protection of mankind and also hallowing and fertility. Besides Old Norse Þórr, extensions of the god occur in Old English as Þunor and in Old High German as Donar (runic ᚦᛟᚾᚨᚱ þonar). All forms of the deity stem from a Common Germanic *Þunraz (meaning thunder).\n")
-
-readyOrNot = input(f"{nickname}, Are you ready for the first chanllenge?Type (yes or not):  \n") 
+def readyOrNot():
+	readyOrNot = input("""
+[1] Keep Going
+[2] I need a minute to breathe ;)
+	""")
+	if readyOrNot == "1":
+	    print("So... Lets Go... \n")
+	else:
+	    print("No problem, take a breathe and then come back :) \n")
+	    exit()
+readyOrNot()
+#Question number 1
+print("""QUESTION NUMBER 1 \n
+ In Germanic mythology, Thor (/θɔːr/; from Old Norse: Þórr, runic ᚦᚢᚱ þur) is a hammer-wielding god associated with thunder, lightning, storms, sacred groves and trees, strength, the protection of mankind and also hallowing and fertility. Besides Old Norse Þórr, extensions of the god occur in Old English as Þunor and in Old High German as Donar (runic ᚦᛟᚾᚨᚱ þonar). All forms of the deity stem from a Common Germanic *Þunraz (meaning thunder).\n""")
 
 answer = "associated with thunder, lightning, storms, sacred groves and trees, strength, the protection of mankind and also hallowing and fertility."
 guess = ""
 guess_count = 0
-guess_limit = 5
+guess_limit = 4
 out_of_guesses = False
 
 while guess != answer and not(out_of_guesses):
 	if guess_count < guess_limit:
 		guess = input("In Germanic mythology, Thor (/θɔːr/; from Old Norse: Þórr, runic ᚦᚢᚱ þur) is a hammer-wielding god associated to what? \n")
 		guess_count += 1
-	else: 
-		out_of_guesses = True 
-		
+	else:
+		out_of_guesses = True
+
 if out_of_guesses:
 	print("Oh Noo :( The right answer is: thunder, lightning, storms, sacred groves and trees, strength, the protection of mankind and also hallowing and fertility \n")
 else:
 	print(f"{nickname} YOU WIN!!\n")
 
-#QUESTION 2
-challenge_2 = input("Type (yes or no) to continue: ")
-
-if challenge_2 == "yes":
-    print("So...Lets Go...\n")
-else: 
-    print("Command Invalid!!!\n")
-
-print("Now you are in the lvl 2, so you will need to be smarter, because you only have 4 chances to give the right answer.\n")
-
-print("QUESTION NUMBER 2 \n")
-
-print("Thor is a prominently mentioned god throughout the recorded history of the Germanic peoples, from the Roman occupation of regions of Germania, to the tribal expansions of the Migration Period, to his high popularity during the Viking Age, when, in the face of the process of the Christianization of Scandinavia, emblems of his hammer, Mjölnir, were worn and Norse pagan personal names containing the name of the god bear witness to his popularity.\n")
+#Question number 2
+readyOrNot()
+print("""Now you are in the lvl 2, so you will need to be smarter, because you only have 4 chances to give the right answer.\n
+ QUESTION NUMBER 2 \n
+Thor is a prominently mentioned god throughout the recorded history of the Germanic peoples, from the Roman occupation of regions of Germania, to the tribal expansions of the Migration Period, to his high popularity during the Viking Age, when, in the face of the process of the Christianization of Scandinavia, emblems of his hammer, Mjölnir, were worn and Norse pagan personal names containing the name of the god bear witness to his popularity.\n""")
 
 answer = "throughout the recorded history of the Germanic peoples, from the Roman occupation of regions of Germania, to the tribal expansions of the Migration Period, to his high popularity during the Viking Age"
 guess = ""
@@ -76,36 +56,25 @@ while guess != answer and not(out_of_guesses):
 	if guess_count < guess_limit:
 		guess = input("Thor is a prominently mentioned god throughout what? \n")
 		guess_count += 1
-	else: 
-		out_of_guesses = True 
-		
+	else:
+		out_of_guesses = True
+
 if out_of_guesses:
-	print("Oh Noo :( The right answer is:  throughout the recorded history of the Germanic peoples, from the Roman occupation of regions of Germania, to the tribal expansions of the Migration Period, to his high popularity during the Viking Age \n")
+	print("Oh Noo :( The right answer is:  Throughout the recorded history of the Germanic peoples, from the Roman occupation of regions of Germania, to the tribal expansions of the Migration Period, to his high popularity during the Viking Age \n")
 else:
 	print(f"{nickname}, YOU WIN!!")
 
 print(f"Hey, {nickname} I can see that you got at here, You are smart (if you just anwered worng, dont worry we have more levels for you.")
+readyOrNot()
 
-pass_through = input("Type 1 to keep going: ")
-
-if pass_through == 1:
-    print("Lets go...")
-else:
-    print("Command Invalid...")
-
-#QUESTION 3
-print("Be Prepared because thats the bigger chanllenge, Be aware because i will give you a lot of information...Lets Go...\n")
-
-print("QUESTION NUMBER 3 \n")
-
-print("Due to the nature of the Germanic corpus, narratives featuring Thor are only attested in Old Norse, where Thor appears throughout Norse mythology. Norse mythology, largely recorded in Iceland from traditional material stemming from Scandinavia, provides numerous tales featuring the god. In these sources, Thor bears at least fifteen names, is the husband of the golden-haired goddess Sif, is the lover of the jötunn Járnsaxa, and is generally described as fierce eyed, red haired and red bearded.\n")
-
-print("With Sif, Thor fathered the goddess (and possible valkyrie) Þrúðr; with Járnsaxa, he fathered Magni; with a mother whose name is not recorded, he fathered Móði, and he is the stepfather of the god Ullr. By way of Odin, Thor has numerous brothers, including Baldr. Thor has two servants, Þjálfi and Röskva, rides in a cart or chariot pulled by two goats, Tanngrisnir and Tanngnjóstr (that he eats and resurrects), and is ascribed three dwellings (Bilskirnir, Þrúðheimr, and Þrúðvangr). Thor wields the mountain-crushing hammer, Mjölnir, wears the belt Megingjörð and the iron gloves Járngreipr, and owns the staff Gríðarvölr.\n")
-
-print("Thor's exploits, including his relentless slaughter of his foes and fierce battles with the monstrous serpent Jörmungandr—and their foretold mutual deaths during the events of Ragnarök—are recorded throughout sources for Norse mythology.\n")
+#Question Number 3
+print("""Be Prepared because thats the bigger chanllenge, Be aware because i will give you a lot of information!!! \n
+QUESTION NUMBER 3 \n
+ Due to the nature of the Germanic corpus, narratives featuring Thor are only attested in Old Norse, where Thor appears throughout Norse mythology. Norse mythology, largely recorded in Iceland from traditional material stemming from Scandinavia, provides numerous tales featuring the god. In these sources, Thor bears at least fifteen names, is the husband of the golden-haired goddess Sif, is the lover of the jötunn Járnsaxa, and is generally described as fierce eyed, red haired and red bearded.\n
+ With Sif, Thor fathered the goddess (and possible valkyrie) Þrúðr; with Járnsaxa, he fathered Magni; with a mother whose name is not recorded, he fathered Móði, and he is the stepfather of the god Ullr. By way of Odin, Thor has numerous brothers, including Baldr. Thor has two servants, Þjálfi and Röskva, rides in a cart or chariot pulled by two goats, Tanngrisnir and Tanngnjóstr (that he eats and resurrects), and is ascribed three dwellings (Bilskirnir, Þrúðheimr, and Þrúðvangr). Thor wields the mountain-crushing hammer, Mjölnir, wears the belt Megingjörð and the iron gloves Járngreipr, and owns the staff Gríðarvölr.\n
+ Thor's exploits, including his relentless slaughter of his foes and fierce battles with the monstrous serpent Jörmungandr—and their foretold mutual deaths during the events of Ragnarök—are recorded throughout sources for Norse mythology. \n""")
 
 answer = "throughout the recorded history of the Germanic peoples, from the Roman occupation of regions of Germania, to the tribal expansions of the Migration Period, to his high popularity during the Viking Age"
-
 guess = ""
 guess_count = 0
 guess_limit = 4
@@ -115,39 +84,23 @@ while guess != answer and not(out_of_guesses):
 	if guess_count < guess_limit:
 		guess = input("Thor is a prominently mentioned god throughout what? \n")
 		guess_count += 1
-	else: 
-		out_of_guesses = True 
-		
+	else:
+		out_of_guesses = True
+
 if out_of_guesses:
 	print("Oh Noo :( The Right Answer is: throughout the recorded history of the Germanic peoples, from the Roman occupation of regions of Germania, to the tribal expansions of the Migration Period, to his high popularity during the Viking Age \n")
-	
 else:
 	print(f"{nickname}, YOU WIN!!")
 
-print(f"Hello, {nickname}, I can see that you got at here, You are smart (if you just anwered worng, dont worry we have more levels for you.")
-
-pass_through = input("Type 1 to keep going: ")
-
-if pass_through == 1:
-    print("Lets go...\n")
-else:
-    print("Command Invalid...\n")
+print(f"Hello, {nickname}, I can see that you got at here, You are smart (if you just anwered worng, dont worry we have more levels for you. \n")
+readyOrNot()
 
 #QUESTION 4
-print("So... At this level you will have Only 1 Chance to give me a Correct answer, but dont worry. Thats the most easy question of all... Lets Go...\n")
-
-challenge_4 = input("Type (yes or no) to continue: \n")
-if challenge_4 == "yes":
-    print("So...Lets Go... \n")
-else: 
-    print("Command Invalid!!! \n")
-
-print("QUESTION NUMBER 4 \n")
-
-print("Into the modern period, Thor continued to be acknowledged in rural folklore throughout Germanic-speaking Europe. Thor is frequently referred to in place names, the day of the week Thursday bears his name (modern English Thursday derives from Old English Þūnresdæg, 'Þunor's day'), and names stemming from the pagan period containing his own continue to be used today, particularly in Scandinavia. Thor has inspired numerous works of art and references to Thor appear in modern popular culture. Like other Germanic deities, veneration of Thor is revived in the modern period in Heathenry.\n")
+print("""QUESTION NUMBER 4 \n
+So... At this level you will have Only 1 Chance to give me a Correct answer, but dont worry. Thats the most easy question of all... Lets Go...\n
+  Into the modern period, Thor continued to be acknowledged in rural folklore throughout Germanic-speaking Europe. Thor is frequently referred to in place names, the day of the week Thursday bears his name (modern English Thursday derives from Old English Þūnresdæg, 'Þunor's day'), and names stemming from the pagan period containing his own continue to be used today, particularly in Scandinavia. Thor has inspired numerous works of art and references to Thor appear in modern popular culture. Like other Germanic deities, veneration of Thor is revived in the modern period in Heathenry.\n""")
 
 answer = "Thor has inspired numerous works of art and references to Thor appear in modern popular culture."
-
 guess = ""
 guess_count = 0
 guess_limit = 1
@@ -157,39 +110,23 @@ while guess != answer and not(out_of_guesses):
 	if guess_count < guess_limit:
 		guess = input("What Thor had Inspired? \n")
 		guess_count += 1
-	else: 
-		out_of_guesses = True 
-		
+	else:
+		out_of_guesses = True
+
 if out_of_guesses:
 	print("Oh Noo :( The Right Answer is: Thor has inspired numerous works of art and references to Thor appear in modern popular culture. \n")
 else:
 	print(f"{nickname}, YOU WIN!!\n")
 
-print("Hey, This question was really easy, isnt? haha... Lets go to the next. I promisse that the next question will need more knowledge of you.")
-
-pass_through = input("Type 1 to keep going: ")
-
-if pass_through == 1:
-	print("So, Lets go...\n")
-else:
-	print("Invalid command...\n")
+print("Hey, This question was really easy, isnt? haha... Lets go to the next. I promisse that the next question will need more knowledge of you. \n")
+readyOrNot()
 
 #QUESTION 5
+print("""QUESTION NUMBER 5 \n
+Now i will make you some basic questions about Thor... The next questions are REALLY EASY... Lets Go...\n
+Mjölnir is depicted in Norse mythology as one of the most fearsome and powerful weapons in existence, capable of leveling mountains. In its account of Norse mythology, the Prose Edda relates how the hammer's characteristically short handle was due to a mistake during its manufacture.\n""")
 
-print("Now i will make you some basic questions about Thor... The next questions are REALLY EASY... Lets Go...\n")
-
-challenge_5 = input("Type (yes or no) to continue: \n")
-
-if challenge_5 == "yes":
-    print("So...Lets Go...\n")
-else: 
-    print("Command Invalid!!!\n")
-
-print("QUESTION NUMBER 5 \n")
-
-print("Mjölnir is depicted in Norse mythology as one of the most fearsome and powerful weapons in existence, capable of leveling mountains. In its account of Norse mythology, the Prose Edda relates how the hammer's characteristically short handle was due to a mistake during its manufacture.\n")
 answer = "Thors Hammer"
-
 guess = ""
 guess_count = 0
 guess_limit = 3
@@ -199,40 +136,23 @@ while guess != answer and not(out_of_guesses):
 	if guess_count < guess_limit:
 		guess = input("What is Mjölnir ?\n")
 		guess_count += 1
-	else: 
-		out_of_guesses = True 
-		
+	else:
+		out_of_guesses = True
+
 if out_of_guesses:
 	print("Oh Noo :( The Right Answer is: Thors Hammer \n")
 else:
 	print(f"{nickname}, YOU WIN!!\n")
 
-pass_through = input("Type 1 to keep going: \n")
+readyOrNot()
 
-if pass_through == 1:
-	print("So, Lets go...\n")
-else:
-	print("Invalid command...\n")
-			
 #QUESTION 6
-
-print(f"Hey {nickname} Welcome to the Question number 6. Im really happy for having you here. Good Luck in the next Questions")
-
-challenge_6 = input("Type (yes or no) to continue: \n")
-
-if challenge_6 == "yes":
-    print("So...Lets Go...\n")
-else: 
-    print("Command Invalid!!!\n")
-
-print("QUESTION NUMBER 6 \n")
-
-print("Though most famous for its use as a weapon, Mjolnir played a vital role in Norse religious practices and rituals. Its use in formal ceremonies to bless marriages, births, and funerals is described in several episodes within the Prose Edda. \n")
-
-print("The existence of this rite is assumed in the tale of Thor as a Transvestite, where the giants stole Thor’s hammer and he went to retrieve it by dressing as a bride to be married to one of the giants, knowing that the hammer would be presented during the ceremony. When it was presented, he seized it and promptly smashed the skulls of all of the giants in attendance. A Bronze Age rock carving from Scandinavia apparently depicts a couple being blessed by a larger figure holding a hammer, which indicates the considerable antiquity of this notion. \n")
+print(f"""QUESTION NUMBER 6 \n
+Hey {nickname} Welcome to the Question number 6. Im really happy for having you here. Good Luck in the next Questions
+Though most famous for its use as a weapon, Mjolnir played a vital role in Norse religious practices and rituals. Its use in formal ceremonies to bless marriages, births, and funerals is described in several episodes within the Prose Edda.\n
+The existence of this rite is assumed in the tale of Thor as a Transvestite, where the giants stole Thor’s hammer and he went to retrieve it by dressing as a bride to be married to one of the giants, knowing that the hammer would be presented during the ceremony. When it was presented, he seized it and promptly smashed the skulls of all of the giants in attendance. A Bronze Age rock carving from Scandinavia apparently depicts a couple being blessed by a larger figure holding a hammer, which indicates the considerable antiquity of this notion. \n""")
 
 answer = "he went to retrieve it by dressing as a bride to be married to one of the giants"
-
 guess = ""
 guess_count = 0
 guess_limit = 3
@@ -242,39 +162,23 @@ while guess != answer and not(out_of_guesses):
 	if guess_count < guess_limit:
 		guess = input("What Thor did to get back his hammer? \n")
 		guess_count += 1
-	else: 
-		out_of_guesses = True 
-		
+	else:
+		out_of_guesses = True
+
 if out_of_guesses:
 	print("Oh Noo :( The Right Answer is: He went to retrieve it by dressing as a bride to be married to one of the giants. \n")
 else:
 	print(f"{nickname}, YOU WIN!!\n")
 
-pass_through = input("Type 1 to keep going: \n")
+readyOrNot()
 
-if pass_through == 1:
-	print("So, Lets go...\n")
-else:
-	print("Invalid command...\n")
-		
 #QUESTION 7
-challenge_7 = input("Type (yes or no) to continue: \n")
-
-if challenge_7 == "yes":
-    print("So...Lets Go...\n")
-else: 
-    print("Command Invalid!!!\n")
-
-print("QUESTION NUMBER 7 \n")
-
-print("Thor possessed a formidable chariot, hreggs váfreiðar or “storm's hovering chariot”, which is drawn by two goats, Tanngrisnir and Tanngnjóstr. A belt, Megingjörð, and iron gloves, Járngreipr, were used to lift Mjölnir. Mjölnir is the focal point of some of Thor's adventures.")
-
-print("This is clearly illustrated in a poem found in the Poetic Edda titled Þrymskviða. The myth relates that the giant, Þrymr, steals Mjölnir from Thor and then demands the goddess Freyja in exchange. Loki, the god notorious for his duplicity, conspires with the other Æsir to recover Mjölnir by disguising Thor as Freyja and presenting him as the (goddess) to Þrymr.  \n")
-
-print("At a banquet Þrymr holds in honor of the impending union, Þrymr takes the bait. Unable to contain his passion for his new maiden with long, blond locks (and broad shoulders), Þrymr approaches the bride by placing Mjölnir on (her) lap; Thor rips off his disguise and destroys Þrymr and his giant cohorts. \n")
+print(""""QUESTION NUMBER 7 \n
+Thor possessed a formidable chariot, hreggs váfreiðar or “storm's hovering chariot”, which is drawn by two goats, Tanngrisnir and Tanngnjóstr. A belt, Megingjörð, and iron gloves, Járngreipr, were used to lift Mjölnir. Mjölnir is the focal point of some of Thor's adventures. \n
+This is clearly illustrated in a poem found in the Poetic Edda titled Þrymskviða. The myth relates that the giant, Þrymr, steals Mjölnir from Thor and then demands the goddess Freyja in exchange. Loki, the god notorious for his duplicity, conspires with the other Æsir to recover Mjölnir by disguising Thor as Freyja and presenting him as the (goddess) to Þrymr.  \n
+At a banquet Þrymr holds in honor of the impending union, Þrymr takes the bait. Unable to contain his passion for his new maiden with long, blond locks (and broad shoulders), Þrymr approaches the bride by placing Mjölnir on (her) lap; Thor rips off his disguise and destroys Þrymr and his giant cohorts. \n""")
 
 answer = "Þrymskviða"
-
 guess = ""
 guess_count = 0
 guess_limit = 3
@@ -284,35 +188,21 @@ while guess != answer and not(out_of_guesses):
 	if guess_count < guess_limit:
 		guess = input("What is the Title of the poem cited on the text? \n")
 		guess_count += 1
-	else: 
-		out_of_guesses = True 
-		
+	else:
+		out_of_guesses = True
+
 if out_of_guesses:
 	print("Oh Noo :( The Right Answer is: Þrymskviða \n")
 else:
 	print(f"{nickname}, YOU WIN!!\n")
 
-pass_through = input("Type 1 to keep going: \n")
-
-if pass_through == 1:
-	print("So, Lets go...\n")
-else:
-	print("Invalid command...\n")
+readyOrNot()
 
 #QUESTION 8
-challenge_8 = input("Type (yes or no) to continue: \n")
-
-if challenge_8 == "yes":
-    print("So...Lets Go...\n")
-else: 
-    print("Command Invalid!!!\n")
-
-print("QUESTION NUMBER 8 \n")
-
-print("Two years after the battle of Sokovia, Thor is imprisoned by the fire demon Surtur, who reveals that Thor's father Odin is no longer on Asgard. He explains that the realm will soon be destroyed during the prophesied Ragnarök, once Surtur unites his crown with the Eternal Flame that burns in Odin's vault. Thor frees himself, defeats Surtur and takes his crown, believing he has prevented Ragnarök. \n")
+print("""QUESTION NUMBER 8 \n
+Two years after the battle of Sokovia, Thor is imprisoned by the fire demon Surtur, who reveals that Thor's father Odin is no longer on Asgard. He explains that the realm will soon be destroyed during the prophesied Ragnarök, once Surtur unites his crown with the Eternal Flame that burns in Odin's vault. Thor frees himself, defeats Surtur and takes his crown, believing he has prevented Ragnarök. \n""")
 
 answer = "Thor is imprisoned by the fire demon Surtur"
-
 guess = ""
 guess_count = 0
 guess_limit = 3
@@ -322,35 +212,21 @@ while guess != answer and not(out_of_guesses):
 	if guess_count < guess_limit:
 		guess = input("What Happened Two years after the battle of Sokovia? \n")
 		guess_count += 1
-	else: 
-		out_of_guesses = True 
-		
+	else:
+		out_of_guesses = True
+
 if out_of_guesses:
 	print("Oh Noo :( The Right Answer is: Thor is imprisoned by the fire demon Surtur \n")
 else:
 	print(f"{nickname}, YOU WIN!!\n")
 
-pass_through = input("Type 1 to keep going: \n")
-
-if pass_through == 1:
-	print("So, Lets go...\n")
-else:
-	print("Invalid command...\n")
+readyOrNot()
 
 #QUESTION 9
-challenge_9 = input("Type (yes or no) to continue: \n")
-
-if challenge_9 == "yes":
-    print("So...Lets Go...\n")
-else: 
-    print("Command Invalid!!!\n")
-
-print("QUESTION NUMBER 9 \n")
-
-print("Thor returns to Asgard to find Heimdall gone and his estranged brother Loki posing as Odin. After exposing Loki, Thor forces him to help find their father, and with directions from Stephen Strange at the Sanctum Sanctorum in New York City, they locate Odin in Norway. Odin explains that he is dying, Ragnarök is imminent despite Thor's efforts to prevent it, and his passing will free his firstborn child, Hela, from a prison she was sealed in long ago. Hela was the leader of Asgard's armies, conquering the Nine Realms with Odin, but Odin imprisoned her and wrote her out of history after fearing that she had become too ambitious and powerful. Odin dies as Thor and Loki look on, and Hela appears, destroying Thor's hammer Mjolnir. She pursues the two as they attempt to flee through the Bifröst Bridge, forcing them out into space. Arriving in Asgard, she defeats its army and kills the Warriors Three. She then resurrects the ancient dead who once fought with her, including her giant wolf Fenris, and appoints the Asgardian Skurge as her executioner. Hela plans to use the Bifröst to expand Asgard's empire, but Heimdall sneaks in, takes the sword that controls the Bridge and begins hiding other Asgardians.")
+print("""QUESTION NUMBER 9 \n
+Thor returns to Asgard to find Heimdall gone and his estranged brother Loki posing as Odin. After exposing Loki, Thor forces him to help find their father, and with directions from Stephen Strange at the Sanctum Sanctorum in New York City, they locate Odin in Norway. Odin explains that he is dying, Ragnarök is imminent despite Thor's efforts to prevent it, and his passing will free his firstborn child, Hela, from a prison she was sealed in long ago. Hela was the leader of Asgard's armies, conquering the Nine Realms with Odin, but Odin imprisoned her and wrote her out of history after fearing that she had become too ambitious and powerful. Odin dies as Thor and Loki look on, and Hela appears, destroying Thor's hammer Mjolnir. She pursues the two as they attempt to flee through the Bifröst Bridge, forcing them out into space. Arriving in Asgard, she defeats its army and kills the Warriors Three. She then resurrects the ancient dead who once fought with her, including her giant wolf Fenris, and appoints the Asgardian Skurge as her executioner. Hela plans to use the Bifröst to expand Asgard's empire, but Heimdall sneaks in, takes the sword that controls the Bridge and begins hiding other Asgardians.""")
 
 answer = "Hela was the leader of Asgard's armies, conquering the Nine Realms with Odin"
-
 guess = ""
 guess_count = 0
 guess_limit = 3
@@ -360,34 +236,28 @@ while guess != answer and not(out_of_guesses):
 	if guess_count < guess_limit:
 		guess = input("What Hela was? \n")
 		guess_count += 1
-	else: 
-		out_of_guesses = True 
-		
+	else:
+		out_of_guesses = True
+
 if out_of_guesses:
 	print("Oh Noo :( The Right Answer is: Hela was the leader of Asgard's armies, conquering the Nine Realms with Odin \n")
 else:
 	print(f"{nickname}, YOU WIN!!\n")
 
-pass_through = input("Type 1 to keep going: \n")
-
-if pass_through == 1:
-	print("So, Lets go...\n")
-else:
-	print("Invalid command...\n")
+readyOrNot()
 
 #QUESTION 10
-challenge_10 = input("Type (yes or no) to continue: \n")
+print("""So... This Question wil need some attention. GOOD LUCK!!!\n
+QUESTION NUMBER 10 \n
+ "It sates itself on the life-blood
+  of fated men, paints red the powers' homes
+  with crimson gore. Black become the sun's beams
+  in the summers that follow, weathers all treacherous.
+  Do you still seek to know? And what?"
 
-if challenge_10 == "yes":
-    print("So... This Question wil need Some searches of your part. You will need to find the right answer on the right website. GOOD LUCK!!!\n")
-else: 
-    print("Command Invalid!!!\n")
+  Poetic Edda\n""")
 
-print("QUESTION NUMBER 10 \n")
-print("Gime me the Poetic Edda poem:")
-
-answer = "It sates itself on the life-blood   of fated men, paints red the powers' homes   with crimson gore. Black become the sun's beams   in the summers that follow, weathers all treacherous.   Do you still seek to know? And what? "
-
+answer = "It sates itself on the life-blood   \n of fated men, paints red the powers' homes\n   with crimson gore. Black become the sun's beams\n   in the summers that follow, weathers all treacherous.\n   Do you still seek to know? And what? "
 guess = ""
 guess_count = 0
 guess_limit = 3
@@ -395,19 +265,12 @@ out_of_guesses = False
 
 while guess != answer and not(out_of_guesses):
 	if guess_count < guess_limit:
-		guess = input("What is the Title of the poem cited on the text? \n")
+		guess = input("Who wrote this poem? \n")
 		guess_count += 1
-	else: 
-		out_of_guesses = True 
-		
+	else:
+		out_of_guesses = True
+
 if out_of_guesses:
 	print("Oh Noo :( The Right Answer is: It sates itself on the life-blood   of fated men, paints red the powers' homes   with crimson gore. Black become the sun's beams   in the summers that follow, weathers all treacherous.   Do you still seek to know? And what? \n")
 else:
 	print(f"{nickname}, YOU WIN!!\n")
-
-pass_through = input("Type 1 to keep going: \n")
-
-if pass_through == 1:
-	print("So, Lets go...\n")
-else:
-	print("Invalid command...\n")
