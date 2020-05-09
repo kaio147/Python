@@ -1,5 +1,5 @@
 nickname = input("Enter a nickname: ")
-print(f"Hey, {nickname} Welcome to the text game. I hope you enjoy it :) \n {nickname}, Our Game will be about: THOR \n")
+print("Hey, {} Welcome to the text game. I hope you enjoy it :) \n {}, Our Game will be about: THOR \n".format(nickname,nickname))
 interactingWithThePlayer = input("Do you know something about Thor? \n")
 
 if interactingWithThePlayer == "yes":
@@ -38,7 +38,7 @@ while guess != answer and not(out_of_guesses):
 if out_of_guesses:
 	print("Oh Noo :( The right answer is: thunder, lightning, storms, sacred groves and trees, strength, the protection of mankind and also hallowing and fertility \n")
 else:
-	print(f"{nickname} YOU WIN!!\n")
+	print("{} YOU WIN!!\n".format(nickname))
 
 readyOrNot()
 print("""Now you are in the lvl 2, so you will need to be smarter, because you only have 4 chances to give the right answer.\n
